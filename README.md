@@ -2,6 +2,9 @@
 
 https://github.com/sigmade/BookmakerAPI
 
+------
+<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/sigmade/BookmakerAPI">
+
 # AngularUI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
