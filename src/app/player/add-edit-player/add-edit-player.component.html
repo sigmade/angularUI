@@ -1,0 +1,32 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+
+    <div class="form-froup row" style="width: 60%;">
+        <div class="input-group m-2">
+            <label class="col-sm-2 col-form-label">ФИО Игрока</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" [(ngModel)]="fullName"
+                placeholder="Введите ФИО Игрока">
+            </div>
+        </div>
+        <div class="input-group m-2">
+            <label class="col-sm-2 col-form-label">Команда</label>
+            <div class="col-sm-10">
+            <select class="form-control" [(ngModel)]="teamId">
+                <option disabled>--Выбрать--</option>
+                <option *ngFor="let team of TeamList" [value]="team.teamId">
+                    {{team.teamName}} 
+                </option>
+            </select>
+            </div>
+        </div>
+    
+    </div>
+</div>
+<div class="input-group m-2">
+    <button (click)="addPlayer()" *ngIf="player.playerId==0" class="btn btn-primary">
+        Добавить
+    </button>
+    <button (click)="updatePlayer()" *ngIf="player.playerId!=0" class="btn btn-primary">
+        Сохранить изменения
+    </button>
+</div>
